@@ -116,10 +116,18 @@ public class ItemFactory {
      * Method to query the NBT store.
      * Key is the string that corresponds to the value.
      * @param key The key to query for.
-     * @return
+     * @return The value
      */
     public String getTag(String key) {
         return nbtTags.get(key);
+    }
+
+    /**
+     * Method to get all de-serialized NBT tags
+     * @return nbtTags
+     */
+    public Map<String, String> getAllTags() {
+        return nbtTags;
     }
 
     /**

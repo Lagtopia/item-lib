@@ -6,7 +6,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>me.csdad.lagtopia</groupId>
   <artifactId>itemlib</artifactId>
-  <version>1.0.0</version>
+  <version>1.0.1</version>
   <name>ItemLib</name>
   <description>Reusable item and NBT construction library for Spigot plugins</description>
   <url>https://github.com/Lagtopia/item-lib</url>
