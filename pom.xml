@@ -39,6 +39,10 @@
       <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
     </repository>
     <repository>
+      <id>codemc-repo</id>
+      <url>https://repo.codemc.io/repository/maven-public/</url>
+    </repository>
+    <repository>
       <id>github</id>
       <url>https://maven.pkg.github.com/Lagtopia/core-lib</url>
     </repository>
