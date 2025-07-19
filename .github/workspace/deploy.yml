@@ -1,0 +1,26 @@
+name: Deploy ItemLib to GitHub Packages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: 17
+          distribution: temurin
+
+      - name: Deploy to GitHub Packages
+        run: mvn --batch-mode deploy --settings .github/settings.xml || echo "Deploy skipped (likely already published). Refer to message to ensure return code was 409."
+        env:
+          GITHUB_ACTOR: Lagtopia
+          GITHUB_TOKEN: ${{ secrets.mvn_deploy }}
